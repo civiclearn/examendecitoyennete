@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles – ExamenDeCitoyennete.ca</title>
+
+  <!-- GLOBAL SHARED -->
+  <link rel="stylesheet" href="/assets/css/shared.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+<style>/* TOPIC SWITCHER / SUBMENU FOR CANADA (using .side) */
+.side {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  margin-bottom: 2.2rem;
+  padding: 0.5rem 0;
+  font-size: 0.92rem;
+  max-width: 900px;
+  line-height: 1.4;
+}
+
+.side a {
+  color: var(--brand-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.side a:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+.side a.active {
+  background: var(--brand);
+  color: #fff;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    
+    <!-- LEFT -->
+    <div class="header-left">
+      <a href="/index.html" class="brand-link">
+        <img src="/assets/images/ca.svg" alt="CA">
+        <div class="brand-title">ExamenDeCitoyennete.ca</div>
+      </a>
+    </div>
+
+    <!-- CENTER NAV -->
+    <div class="header-center">
+      <nav class="header-nav">
+        <a href="/test-gratuit.html">Test gratuit</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="header-right">
+      <div class="brand-powered">propulsé par <span>CivicLearn</span></div>
+      <a href="https://civiclearn.com/canadafr/checkout.html" class="btn-small-purple">Inscription</a>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="articles-hero">
+    <h1>Articles et guides</h1>
+    <p>Ressources essentielles pour comprendre l’examen, améliorer votre préparation et optimiser vos résultats.</p>
+
+    <div class="articles-search">
+      <input type="text" placeholder="Rechercher un article…">
+    </div>
+  </section>
+
+
+  <!-- STICKY ARTICLES -->
+  <section class="articles-sticky">
+    <h2 class="section-title">Guides essentiels</h2>
+
+    <div class="sticky-grid">
+
+      <a href="/articles/conditions-naturalisation.html" class="sticky-card">
+        <h3>Conditions de la naturalisation</h3>
+        <p>Toutes les règles officielles pour être admissible à la citoyenneté canadienne.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+      <a href="/articles/a-propos-examen.html" class="sticky-card">
+        <h3>À propos de l’examen</h3>
+        <p>Structure, durée, notation et informations officielles de l’épreuve.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+      <a href="/articles/preparation-examen.html" class="sticky-card">
+        <h3>Préparation à l’examen</h3>
+        <p>Méthodes, stratégies et plan de préparation pour réussir du premier coup.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+      <a href="/articles/fonctionnement-programme.html" class="sticky-card">
+        <h3>Comment fonctionne notre programme</h3>
+        <p>Explications complètes de notre plateforme, tests et progression.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+      <a href="/articles/sujets-essentiels.html" class="sticky-card">
+        <h3>Sujets essentiels de l’examen</h3>
+        <p>Histoire, institutions, géographie, gouvernance : tout ce qu’il faut maîtriser.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+      <a href="/articles/questions-difficiles.html" class="sticky-card">
+        <h3>Questions difficiles</h3>
+        <p>Les pièges les plus fréquents, expliqués simplement pour ne plus vous tromper.</p>
+        <span class="card-more">Lire →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="articles-grid">
+    <div class="blog-grid">
+
+      <!-- EXAMPLE 1 -->
+      <a href="/articles/comment-reviser-efficacement.html" class="blog-card">
+        <img src="/assets/images/blog1.webp" alt="">
+        <div class="blog-card-body">
+          <span class="blog-category">Conseils</span>
+          <h3>Comment réviser efficacement pour l’examen</h3>
+          <p>Un guide simple pour structurer votre préparation au quotidien.</p>
+          <span class="card-more">Lire →</span>
+        </div>
+      </a>
+
+      <!-- EXAMPLE 2 -->
+      <a href="/articles/erreurs-frequentes.html" class="blog-card">
+        <img src="/assets/images/blog2.webp" alt="">
+        <div class="blog-card-body">
+          <span class="blog-category">Difficultés</span>
+          <h3>Les erreurs fréquentes des candidats</h3>
+          <p>Analyse des pièges les plus souvent rencontrés et comment les éviter.</p>
+          <span class="card-more">Lire →</span>
+        </div>
+      </a>
+
+      <!-- Add as many blog-card items as needed -->
+
+    </div>
+  </section>
+
+</main>
+<!-- FOOTER -->
+<footer class="cl-footer">
+  <div class="cl-footer-inner">
+    © 2025 <span class="cl-footer-brand">CivicLearn</span> — Tous droits réservés.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Test gratuit – Examen de citoyenneté canadienne | ExamenDeCitoyennete.ca</title>
+<!-- ===============================
+     SEO META
+================================== -->
+<meta name="description" content="Faites un test gratuit de 20 questions pour vous préparer à l’examen de citoyenneté canadienne. Simulation réelle inspirée du guide Discover Canada avec correction immédiate et note finale.">
+<meta name="keywords" content="test citoyenneté canadienne, test gratuit citoyenneté, questions examen citoyenneté, Discover Canada test, simulation examen citoyenneté, préparation citoyenneté en ligne">
+
+<link rel="canonical" href="https://examendecitoyennete.ca/test-gratuit.html">
+
+<!-- ===============================
+     OPEN GRAPH
+================================== -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:title" content="Test gratuit – 20 questions pour l’examen de citoyenneté canadienne">
+<meta property="og:description" content="Essayez un test gratuit de 20 questions basées sur Discover Canada. Correction immédiate, score en direct et simulation réaliste pour évaluer votre préparation.">
+<meta property="og:url" content="https://examendecitoyennete.ca/test-gratuit.html">
+<meta property="og:image" content="https://examendecitoyennete.ca/assets/images/og-default.jpg">
+
+<!-- ===============================
+     TWITTER CARDS
+================================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Test gratuit – Examen de citoyenneté canadienne">
+<meta name="twitter:description" content="Entraînez-vous avec un test gratuit de 20 questions inspirées du guide Discover Canada, et découvrez votre score final.">
+<meta name="twitter:image" content="https://examendecitoyennete.ca/assets/images/og-default.jpg">
+
+<!-- ===============================
+     JSON-LD STRUCTURED DATA
+================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "Test gratuit – Examen de citoyenneté canadienne",
+  "description": "Test gratuit de 20 questions pour se préparer à l’examen de citoyenneté canadienne, basé sur Discover Canada.",
+  "url": "https://examendecitoyennete.ca/test-gratuit.html",
+  "image": "https://examendecitoyennete.ca/assets/images/og-default.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExamenDeCitoyennete.ca",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://examendecitoyennete.ca/assets/images/ca.svg"
+    }
+  }
+}
+</script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/shared.css">
+  <link rel="stylesheet" href="/assets/css/testpages.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="/index.html" class="brand-link">
+        <img src="/assets/images/ca.svg" alt="Canada">
+        <div class="brand-title">ExamenDeCitoyennete.ca</div>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <nav class="header-nav">
+        <a href="/test-gratuit.html">Test gratuit</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <div class="brand-powered">
+        propulsé par <span>CivicLearn</span>
+      </div>
+      <a href="https://civiclearn.com/canadafr/checkout.html" class="btn-small-purple">Inscription</a>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <div class="test-header">
+    <div>
+      <div class="badge">Test gratuit – 20 questions</div>
+      <div class="progress" id="progressLabel">Question 1 sur 20 · Score 0</div>
+    </div>
+    <div class="timer badge" id="timer">45:00</div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-title" id="qTitle">…</div>
+    <div class="choices" id="choices"></div>
+
+    <div class="controls">
+      <button class="btn secondary" id="btnPrev" disabled>← Précédent</button>
+      <button class="btn" id="btnNext" disabled>Suivant →</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="resultPanel" class="result-panel" style="display:none;">
+    <h2>Résultats du test</h2>
+    <div id="gradeStamp" class="result-stamp"></div>
+    <p id="resultText" class="result-text"></p>
+
+    <div class="result-chart-container">
+      <canvas id="resultChart"></canvas>
+    </div>
+
+    <div class="cta">
+      <a href="https://civiclearn.com/canadafr/checkout.html" class="btn">
+        Accéder au programme complet
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="cl-footer">
+  <div class="cl-footer-inner">
+    © 2025 <span class="cl-footer-brand">CivicLearn</span> — Tous droits réservés.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- JAVASCRIPT (Romanian engine, adapted to FR + Canada questions) -->
+<script>
+const QUESTIONS = [
+  {
+    q: "Le droit de contester une détention illégale par l'État est appelé",
+    a: ["Habeas corpus","Magna Carta","Grand Dominion","A mari usque ad mare"]
+  },
+  {
+    q: "Qui a proclamé la modification de la Constitution en 1982?",
+    a: ["la Reine Elizabeth II","la Reine Elizabeth I","Sir Arthur Currie","Sir Robert Borden"]
+  },
+  {
+    q: "Le premier document constitutionnel du Canada est appelé",
+    a: ["l'Acte de l'Amérique du Nord Britannique","La Constitution canadienne","la Magna Carta","La Constitution anglaise"]
+  },
+  {
+    q: "Qui a acclamé le Canada comme un 'Grand Dominion'?",
+    a: ["Poètes et chansonniers","Reine Elizabeth II","John Buchan","Un historien britannique"]
+  },
+  {
+    q: "La Proclamation Royale de 1763 a été signée par",
+    a: ["le Roi George III","la Reine Elizabeth I","la Reine Elizabeth II","le Roi George V"]
+  },
+  {
+    q: "Quel est le nom du dialecte parlé par les Métis ?",
+    a: ["le Michif","le Metison","le Metisier","l'Inuktitut"]
+  },
+  {
+    q: "La majorité des métis vit",
+    a: ["dans les provinces de la Prairie","au Québec","en Colombie Britannique","dans les provinces de l'Atlantique"]
+  },
+  {
+    q: "Quelle est la seule province officiellement bilingue?",
+    a: ["le Nouveau Brunswick","le Québec","l'Ontario","Toutes les provinces sont officiellement bilingues"]
+  },
+  {
+    q: "La déportation des Acadiens est aussi connue sous le nom de",
+    a: ["Le Grand Dérangement","Le Grand Départ","La Grande Déportation","Le Grand Désarroi"]
+  },
+  {
+    q: "Les Hurons-Wendats comme les Cris et les Dénés étaient",
+    a: ["chasseurs-cueilleurs","fermiers","nomades","vivaient de la faune de l'Arctique"]
+  },
+  {
+    q: "Jean Cabot était",
+    a: ["un immigrant italien en Angleterre","un immigrant anglais en Italie","un irlandais","un immigrant espagnol en Angleterre"]
+  },
+  {
+    q: "Le mot Canada a commencé à apparaître sur les cartes dès",
+    a: ["les années 1550","les années 1660","les années 1770","les années 1880"]
+  },
+  {
+    q: "Dans la bataille des Plaines d'Abraham,",
+    a: ["les britanniques ont remporté la victoire sur les français","les français ont gagné","les Loyalistes ont remporté la victoire sur les Premières Nations","les Premières Nations ont gagné"]
+  },
+  {
+    q: "Qui était John Graves Simcoe?",
+    a: ["Fondateur de la Ville de York (aujourd'hui Toronto)","Fondateur de la Ville de Montréal","Fondateur de la Ville de Vancouver","Fondateur du Fort Langley"]
+  },
+  {
+    q: "Nommez le réformateur qui devint plus tard le 'Père de la Confédération'.",
+    a: ["Sir Etienne-Paschal Taché","Joseph Brant","James Naismith","Terry Fox"]
+  },
+  {
+    q: "De qui est le portrait sur le billet de $10 ?",
+    a: ["Sir John Alexander MacDonald","Lieutenant Alexander Roberts Dunn","Sir Frederic Banting","John Cabot"]
+  },
+  {
+    q: "De qui est le portrait sur le billet de $5 ?",
+    a: ["Sir Wilfried Laurier","Sir John A. MacDonald","Sir George-Etienne Cartier","Terry Fox"]
+  },
+  {
+    q: "Le Jour de Vimy est célébré le",
+    a: ["le 9 avril","le 1 octobre","le 20 février","le 14 juillet"]
+  },
+  {
+    q: "Qui étaient les 'Oiseaux Bleus'?",
+    a: ["Les infirmières qui faisaient partie du Corps de Santé Royal Canadien.","Des soldats canadiens dans la guerre d'Afrique du Sud","d'anciens sujets austro-hongrois, principalement des hommes ukrainiens, qui ont été traités comme ressortissants ennemis","des Chinois qui ont aidé à bâtir le Chemin de fer Canadien Pacifique"]
+  },
+  {
+    q: "La défense de Hong Kong (1941) et le raid sur Dieppe (1942) sont des exemples de",
+    a: ["batailles perdues par les Canadiens","victoires des Canadiens","batailles où le Canada n'a pas participé","batailles qui ont eu lieu durant la guerre du Pacifique"]
+  }
+];
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const model = QUESTIONS.map((item, idx) => {
+  const correct = item.a[0];
+  const shuffled = shuffle(item.a);
+  return {
+    index: idx,
+    text: item.q,
+    choices: shuffled.map(opt => ({ text: opt, isCorrect: opt === correct })),
+    answered: false,
+    pickedIndex: -1
+  };
+});
+
+const qTitle = document.getElementById('qTitle');
+const choicesEl = document.getElementById('choices');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+const progressLabel = document.getElementById('progressLabel');
+const resultPanel = document.getElementById('resultPanel');
+const gradeStamp = document.getElementById('gradeStamp');
+const resultText = document.getElementById('resultText');
+const timerEl = document.getElementById('timer');
+
+let qi = 0, score = 0;
+const total = model.length;
+let timerSec = 45 * 60;
+
+const timerInt = setInterval(() => {
+  timerSec--;
+  if (timerSec < 0) { clearInterval(timerInt); finishTest(); return; }
+  const m = Math.floor(timerSec / 60).toString().padStart(2, '0');
+  const s = (timerSec % 60).toString().padStart(2, '0');
+  timerEl.textContent = `${m}:${s}`;
+}, 1000);
+
+function renderQuestion() {
+  const q = model[qi];
+  qTitle.textContent = q.text;
+  choicesEl.innerHTML = '';
+  q.choices.forEach((c, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice' + (q.answered ? ' disabled' : '');
+    btn.textContent = c.text;
+    btn.addEventListener('click', () => pick(idx));
+    choicesEl.appendChild(btn);
+  });
+
+  btnPrev.disabled = (qi === 0);
+  btnNext.disabled = !q.answered;
+
+  progressLabel.textContent = `Question ${qi + 1} sur ${total} · Score ${score}`;
+
+  if (q.answered) applyRevealStyles();
+
+  if (qi === total - 1) btnNext.textContent = "Voir les résultats →";
+  else btnNext.textContent = "Suivant →";
+}
+
+function pick(idx) {
+  const q = model[qi];
+  if (q.answered) return;
+
+  q.answered = true;
+  q.pickedIndex = idx;
+
+  if (q.choices[idx].isCorrect) score++;
+
+  applyRevealStyles();
+
+  btnNext.disabled = false;
+  progressLabel.textContent = `Question ${qi + 1} sur ${total} · Score ${score}`;
+
+  if (qi === total - 1) btnNext.textContent = "Voir les résultats →";
+}
+
+function applyRevealStyles() {
+  const q = model[qi];
+  const buttons = choicesEl.querySelectorAll('.choice');
+  buttons.forEach((b, i) => {
+    b.classList.add('disabled');
+    if (q.choices[i].isCorrect) b.classList.add('correct');
+    if (q.pickedIndex === i && !q.choices[i].isCorrect) b.classList.add('wrong');
+  });
+}
+
+btnNext.addEventListener('click', () => {
+  if (qi < total - 1) {
+    qi++;
+    renderQuestion();
+  } else {
+    finishTest();
+  }
+});
+
+btnPrev.addEventListener('click', () => {
+  if (qi > 0) {
+    qi--;
+    renderQuestion();
+  }
+});
+
+function finishTest() {
+  clearInterval(timerInt);
+  document.querySelector('.question-card').style.display = 'none';
+  resultPanel.style.display = 'block';
+
+  const wrong = total - score;
+  const pass = score >= 15;
+
+  gradeStamp.textContent = pass ? "Test réussi !" : "Test échoué";
+  gradeStamp.className = "result-stamp " + (pass ? "pass" : "fail");
+
+  resultText.textContent =
+    `Score final : ${score} / ${total} (${Math.round(score / total * 100)} %). ` +
+    `Réponses correctes : ${score}. Réponses incorrectes : ${wrong}.`;
+
+  renderChart(score, wrong);
+}
+
+function renderChart(correct, wrong) {
+  const ctx = document.getElementById('resultChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Correctes', 'Incorrectes'],
+      datasets: [{ data: [correct, wrong] }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: { display: true, text: 'Répartition des réponses' }
+      }
+    }
+  });
+}
+
+renderQuestion();
+</script>
+
+</body>
+</html>
