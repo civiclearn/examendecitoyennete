@@ -1,93 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://examendecitoyennete.ca/404.html</loc>
+    <loc>https://examendecitoyennete.ca/</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles.html</loc>
+    <loc>https://examendecitoyennete.ca/articles</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/contact.html</loc>
+    <loc>https://examendecitoyennete.ca/contact</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/index.html</loc>
+    <loc>https://examendecitoyennete.ca/politique-confidentialite</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/politique-confidentialite.html</loc>
+    <loc>https://examendecitoyennete.ca/politique-remboursement</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/politique-remboursement.html</loc>
+    <loc>https://examendecitoyennete.ca/test-gratuit</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/test-gratuit.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/a-propos-examen</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/a-propos-examen.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/article1</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/article1.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/conditions-naturalisation</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/conditions-naturalisation.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/conditions-utilisation</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/conditions-utilisation.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/erreurs-frequentes</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/erreurs-frequentes.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/fonctionnement-programme</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/fonctionnement-programme.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/preparation-examen</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/index.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/questions-difficiles</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/preparation-examen.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/reviser-efficacement</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+
   <url>
-    <loc>https://examendecitoyennete.ca/articles/questions-difficiles.html</loc>
+    <loc>https://examendecitoyennete.ca/articles/sujets-essentiels</loc>
     <lastmod>2025-12-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
-  <url>
-    <loc>https://examendecitoyennete.ca/articles/reviser-efficacement.html</loc>
-    <lastmod>2025-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://examendecitoyennete.ca/articles/sujets-essentiels.html</loc>
-    <lastmod>2025-12-09</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
+
 </urlset>
