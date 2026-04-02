@@ -67,6 +67,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/newhome.css">
+
+<style>
+  /* ── Library trust bar ─────────────────────────────────── */
+  .cl-library-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 20px;
+    background: #f7f4ff;
+    border-top: 1px solid #ede8fb;
+    border-bottom: 1px solid #ede8fb;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .cl-library-icon { font-size: 16px; flex-shrink: 0; }
+  .cl-library-text { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .cl-library-text a { color: #7c3aed; text-decoration: none; font-weight: 500; }
+  .cl-library-text a:hover { text-decoration: underline; }
+  .cl-library-sep { color: #ccc; }
+  .cl-library-cta { font-weight: 400 !important; color: #888 !important; font-size: 13px; }
+  .cl-library-cta:hover { color: #7c3aed !important; }
+</style>
+
 </head>
 
 
@@ -84,7 +110,7 @@
     <nav class="cl-nav">
       <a href="/test-gratuit.html">Test gratuit</a>
 	  <a href="/articles/index.html">Articles</a>
-      <a href="/contact.html">Contact</a>
+      <a href="https://examendecitoyennete.ca/contact">Contact</a>
 	  <a href="https://civiclearn.com/canadafr/login">Connexion</a>
 	  
     </nav>
@@ -182,6 +208,18 @@
 
 
 <!-- INLINE TEST -->
+
+<!-- LIBRARY TRUST BAR -->
+<div class="cl-library-bar">
+  <span class="cl-library-icon">📚</span>
+  <span class="cl-library-text">
+    Accessible gratuitement à la
+    <a href="https://montreal.ca/lieux/bibliotheque-de-parc-extension" target="_blank" rel="noopener">Bibliothèque de Parc-Extension</a>
+    <span class="cl-library-sep">·</span>
+    <a href="https://examendecitoyennete.ca/contact" class="cl-library-cta">Votre bibliothèque n'est pas partenaire&nbsp;?</a>
+  </span>
+</div>
+
 <div id="questions-demo">
 <section class="inline-test">
   <div class="inline-test-inner">
@@ -373,7 +411,7 @@
     <div class="footer-links">
       <a href="/test-gratuit.html">Test gratuit</a>
 	  <a href="/articles/index.html">Articles</a>
-      <a href="/contact.html">Contact</a>
+      <a href="https://examendecitoyennete.ca/contact">Contact</a>
       <a href="/politique-confidentialite.html">Confidentialité</a>
 	  <a href="/politique-remboursements.html">Remboursements</a>
     </div>
