@@ -212,7 +212,7 @@ h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.015em}
   .nav > a{padding:13px 2px;border-bottom:1px solid var(--line);font-size:1rem}
   .nav .lang{padding:13px 2px}
   .hero{padding:32px 0 40px}
-  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px}
   .hero h1{font-size:2rem;margin-top:12px}
   .hero-sub{font-size:1rem;margin-top:14px}
   .hero-ctas{margin-top:22px}
@@ -286,3 +286,27 @@ h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.015em}
   #inline-test-questions::after{content:"";flex:0 0 6%}
 }
 .sticky-cta span,.sticky-cta .btn{white-space:nowrap}
+
+/* ---------- articles (static grid) + small notes ---------- */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.article-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.article-card:hover{border-color:var(--brand-line);transform:translateY(-2px)}
+.article-card h3{font-size:1.02rem;font-weight:600;margin:0 0 6px}
+.article-card p{margin:0;font-size:.9rem;color:var(--muted)}
+#home-articles-list{max-width:none!important}
+.quotes-more .note{display:inline-block;margin-top:6px;font-size:.8rem;color:#8a8590}
+.logo img+img{margin-left:-4px}
+/* long site names (e.g. NaturalisationGeneve.ch): give the name the whole top row on phones */
+@media (max-width:430px){
+  .hdr-in:has(.logo-long){grid-template-areas:"logo logo burger" "powered powered powered" "nav nav nav"}
+  .hdr-in:has(.logo-long) .btn{display:none}
+  .logo-long img{display:inline-block}
+}
+@media (max-width:380px){
+  .logo-long img{display:none}
+  .logo-long{font-size:.86rem}
+}
+/* long compound words (German, Finnish…) must never overflow the screen */
+h1,h2,h3,.fact-label{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+@media (max-width:480px){h1{overflow-wrap:anywhere}}
+.feature img{border-radius:12px;object-fit:cover}
